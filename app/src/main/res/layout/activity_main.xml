@@ -8,12 +8,134 @@
         android:id="@+id/my_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Нажмите на кнопку"
         android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <!--первая строка-->
+    <Button
+        android:id="@+id/delAll_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AC"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@id/del_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_text" />
 
+    <Button
+        android:id="@+id/del_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="C"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@id/percent_button"
+        app:layout_constraintStart_toEndOf="@id/delAll_button"
+        app:layout_constraintTop_toBottomOf="@id/my_text" />
+
+    <Button
+        android:id="@+id/percent_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="%"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@id/divide_button"
+        app:layout_constraintStart_toEndOf="@id/del_button"
+        app:layout_constraintTop_toBottomOf="@id/my_text" />
+
+    <Button
+        android:id="@+id/divide_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="÷"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/percent_button"
+        app:layout_constraintTop_toBottomOf="@id/my_text" />
+
+    <!--Вторая строка-->
+    <Button
+        android:id="@+id/seven_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@id/del_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/delAll_button" />
+
+    <Button
+        android:id="@+id/eight_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@id/nine_button"
+        app:layout_constraintStart_toEndOf="@id/seven_button"
+        app:layout_constraintTop_toBottomOf="@id/delAll_button" />
+
+    <Button
+        android:id="@+id/nine_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@id/multiply_button"
+        app:layout_constraintStart_toEndOf="@id/eight_button"
+        app:layout_constraintTop_toBottomOf="@id/delAll_button" />
+
+    <Button
+        android:id="@+id/multiply_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="x"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/nine_button"
+        app:layout_constraintTop_toBottomOf="@id/delAll_button" />
+
+    <!--третья строка-->
+    <Button
+        android:id="@+id/four_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@id/five_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seven_button" />
+
+    <Button
+        android:id="@+id/five_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@id/six_button"
+        app:layout_constraintStart_toEndOf="@id/four_button"
+        app:layout_constraintTop_toBottomOf="@id/seven_button" />
+
+    <Button
+        android:id="@+id/six_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@id/minus_button"
+        app:layout_constraintStart_toEndOf="@id/five_button"
+        app:layout_constraintTop_toBottomOf="@id/seven_button" />
+
+    <Button
+        android:id="@+id/minus_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/six_button"
+        app:layout_constraintTop_toBottomOf="@id/seven_button" />
+
+    <!--4-ая строка-->
     <Button
         android:id="@+id/first_button"
         android:layout_width="wrap_content"
@@ -22,7 +144,7 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toStartOf="@id/second_button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/my_text" />
+        app:layout_constraintTop_toBottomOf="@id/four_button" />
 
     <Button
         android:id="@+id/second_button"
@@ -32,7 +154,7 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toStartOf="@id/third_button"
         app:layout_constraintStart_toEndOf="@id/first_button"
-        app:layout_constraintTop_toBottomOf="@id/my_text" />
+        app:layout_constraintTop_toBottomOf="@id/four_button" />
 
     <Button
         android:id="@+id/third_button"
@@ -40,9 +162,51 @@
         android:layout_height="wrap_content"
         android:text="3"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/plus_button"
         app:layout_constraintStart_toEndOf="@id/second_button"
-        app:layout_constraintTop_toBottomOf="@id/my_text" />
+        app:layout_constraintTop_toBottomOf="@id/four_button" />
+
+    <Button
+        android:id="@+id/plus_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/third_button"
+        app:layout_constraintTop_toBottomOf="@id/four_button" />
+
+    <!--5-ая строка-->
+    <Button
+        android:id="@+id/comma_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=","
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@id/zero_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/first_button" />
+
+    <Button
+        android:id="@+id/zero_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@id/equals_button"
+        app:layout_constraintStart_toEndOf="@id/comma_button"
+        app:layout_constraintTop_toBottomOf="@id/first_button" />
+
+    <Button
+        android:id="@+id/equals_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="="
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/zero_button"
+        app:layout_constraintTop_toBottomOf="@id/first_button" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

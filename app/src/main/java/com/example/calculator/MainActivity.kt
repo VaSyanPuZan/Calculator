@@ -1,21 +1,48 @@
 package com.example.calculator
 
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.calculator.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
+    companion object {
+        private const val defaultText = "Нажмите на кнопку"
+    }
+
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val textView: TextView = findViewById(R.id.my_text)
-        val firstButton: Button = findViewById(R.id.first_button)
-        val secondButton: Button = findViewById(R.id.second_button)
-        val thirdButton: Button = findViewById(R.id.third_button)
-        firstButton.setOnClickListener { textView.text = "1" }
-        secondButton.setOnClickListener { textView.text = "2" }
-        thirdButton.setOnClickListener { textView.text = "3" }
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
+        binding.myText.text = defaultText
+        binding.firstButton.setOnClickListener {
+            binding.myText.text = binding.myText.text.toString() + "1"
+        }
+        binding.secondButton.setOnClickListener {
+            binding.myText.text = binding.myText.text.toString() + "2"
+        }
+        binding.thirdButton.setOnClickListener {
+            binding.myText.text = binding.myText.text.toString() + "3"
+        }
+        binding.fourButton.setOnClickListener {
+            binding.myText.text = binding.myText.text.toString() + "4"
+        }
+        binding.fiveButton.setOnClickListener {
+            binding.myText.text = binding.myText.text.toString() + "5"
+        }
+        binding.sixButton.setOnClickListener {
+            binding.myText.text = binding.myText.text.toString() + "6"
+        }
+        binding.sevenButton.setOnClickListener {
+            binding.myText.text = binding.myText.text.toString() + "7"
+        }
+        binding.eightButton.setOnClickListener {
+            binding.myText.text = binding.myText.text.toString() + "8"
+        }
+
+
     }
 
 }
